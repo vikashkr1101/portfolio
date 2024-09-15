@@ -1,0 +1,287 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.app.light {
+  background-image: url('../lightbg.jpg');
+  color: black;
+}
+
+.app.dark {
+  background-image: url('../darkbg.jpg');
+  color: white;
+}
+
+.contact-container {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  height: 83.2vh;
+}
+
+.profile-image {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  border: 2px solid #2900ff;
+  object-fit: cover;
+  margin-left: 7rem;
+  margin-top: 13rem;
+}
+
+.contact-info {
+  flex: 1;
+  margin-left: 7rem;
+}
+
+.contact-info h1 {
+  margin-bottom: 30px;
+  margin-top: 6.5rem;
+  font-size: 4rem;
+}
+
+.form {
+  border-top: 3px solid #2900ff;
+  border-left: 3px solid #2900ff;
+  padding: 3rem;
+  width: 42.19rem;
+  height: 19.5rem;
+  display: flex;
+}
+
+.contact-info form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 20rem;
+  padding: 10px;
+}
+
+.contact-info label {
+  font-weight: bold;
+}
+
+.contact-info input,
+.contact-info textarea {
+  padding: 10px;
+  border: none;
+  border-bottom: 2px solid black;
+  background-color: transparent;
+}
+
+.contact-info textarea {
+  height: 60px;
+}
+
+.contact-info button {
+  background-color: #00c3ff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-info button:hover {
+  background-color: #0090bc;
+}
+
+.contact-info p {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.contact-info a {
+  margin-right: 10px;
+  color: #000;
+}
+
+.contact-info i {
+  font-size: 20px;
+}
+
+.glow1 {
+  box-shadow: 0 0 20px #00c3ff;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.contact-email {
+  padding-left: 5rem;
+}
+
+.contact-email a {
+  text-decoration: none;
+  color: rgb(104, 101, 101);
+  font-size: 1.2rem;
+}
+
+.contact-email p {
+  color: rgb(104, 101, 101);
+  font-size: 1.2rem;
+}
+
+.social-icons {
+  margin-top: 5px;
+  padding: 1rem;
+}
+
+.social-icons a {
+  margin-right: 10px;
+  font-size: 24px;
+  padding-right: 1rem;
+}
+
+.fb {
+  color: #007bff;
+}
+
+.insta {
+  color: #ff02ddd6;
+}
+
+.social-icons a:hover {
+  color: #007bff;
+}
+
+/* Media Queries for 768px */
+@media (max-width: 768px) {
+  .contact-container {
+      flex-direction: column;
+      height: auto;
+      padding: 10px;
+  }
+
+  .profile-image {
+      margin: 2rem auto;
+      width: 100%;
+      max-width: 250px;
+      height: auto;
+  }
+
+  .contact-info {
+      margin-left: 0;
+      text-align: center;
+      width: 100%;
+      padding: 0 10px;
+  }
+
+  .form {
+      width: 100%;
+      height: auto;
+      margin: 2rem auto;
+      padding: 1rem;
+      border: none;
+      border-top: 3px solid #2900ff;
+      border-left: none;
+  }
+
+  .contact-email {
+      padding-left: 0;
+  }
+
+  .contact-info h1 {
+      font-size: 2.5rem;
+      margin-top: 2rem;
+  }
+
+  .contact-info form {
+      width: 100%;
+  }
+
+  .contact-info input,
+  .contact-info textarea {
+      width: 100%;
+  }
+
+  .contact-info button {
+      width: 100%;
+      padding: 15px;
+      font-size: 1.2rem;
+  }
+
+  .social-icons {
+      justify-content: center;
+  }
+}
+
+/* Media Queries for 480px */
+@media (max-width: 480px) {
+  .contact-info h1 {
+      font-size: 2rem;
+      margin-top: 1.5rem;
+  }
+
+  .profile-image {
+      width: 250px;
+      height: 250px;
+  }
+
+  .form {
+      width: 90%;
+      padding: 1rem;
+  }
+
+  .contact-info button {
+      padding: 12px;
+      font-size: 1rem;
+  }
+
+  .contact-email a, .contact-email p {
+      font-size: 1rem;
+  }
+}
+
+/* Media Queries for 360px */
+@media (max-width: 360px) {
+  .contact-info h1 {
+      font-size: 1.8rem;
+      margin-top: 1rem;
+  }
+
+  .profile-image {
+      width: 200px;
+      height: 200px;
+  }
+
+  .form {
+      width: 100%;
+      padding: 0.5rem;
+  }
+
+  .contact-info button {
+      padding: 10px;
+      font-size: 0.9rem;
+  }
+
+  .contact-email a, .contact-email p {
+      font-size: 0.9rem;
+  }
+}
+
+/* Media Queries for 320px */
+@media (max-width: 320px) {
+  .contact-info h1 {
+      font-size: 1.6rem;
+      margin-top: 0.5rem;
+  }
+
+  .profile-image {
+      width: 180px;
+      height: 180px;
+  }
+
+  .form {
+      width: 100%;
+      padding: 0.5rem;
+  }
+
+  .contact-info button {
+      padding: 8px;
+      font-size: 0.8rem;
+  }
+
+  .contact-email a, .contact-email p {
+      font-size: 0.8rem;
+  }
+}

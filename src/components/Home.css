@@ -1,0 +1,168 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.app.light {
+  background-image: url('../lightbg.jpeg');
+  color: black;
+}
+
+.app.dark {
+  background-image: url('../darkbg.jpg');
+  color: white;
+}
+
+.home-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 20px;
+  height: 83.2vh;
+}
+
+.image-container {
+  position: relative;
+  width: 500px; 
+  height: 500px;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.right-image {
+  position: absolute;
+  top: 52px;
+  left: 54px;
+  border-radius: 12%;
+  height: 400px;
+  width: 450px;
+}
+
+.info-container {
+  flex: 1;
+  padding-left: 20px;
+  margin-left: 10rem;
+  margin-right: 5rem;
+  text-align: justify;
+  line-height: 1.6;
+}
+
+.info-container h1 {
+  margin: 0;
+}
+
+.info-container p {
+  margin-top: 10px;
+}
+
+b {
+  color: #00c3ff;
+}
+
+.glow1, .glow2 {
+  box-shadow: 0 0 20px #00c3ff;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.glow1:hover, .glow2:hover {
+  box-shadow: 0 0 40px #00c3ff;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For screens smaller than or equal to 768px */
+@media (max-width: 768px) {
+  .home-container {
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+  }
+
+  .image-container {
+      width: 300px;
+      height: 300px;
+  }
+
+  .right-image {
+      height: 280px;
+      width: 280px;
+      top: 10px;
+      left: 10px;
+  }
+
+  .info-container {
+      margin: 0;
+      padding: 0 20px;
+      text-align: center;
+  }
+
+  .info-container h1 {
+      font-size: 1.5rem;
+  }
+
+  .info-container p {
+      font-size: 1rem;
+      text-align: justify;
+  }
+}
+
+/* For screens smaller than or equal to 480px */
+@media (max-width: 480px) {
+  .home-container {
+      padding: 5px;
+  }
+
+  .image-container {
+      width: 250px;
+      height: 250px;
+  }
+
+  .right-image {
+      height: 230px;
+      width: 230px;
+      top: 5px;
+      left: 5px;
+  }
+
+  .info-container h1 {
+      font-size: 1.2rem;
+  }
+
+  .info-container p {
+      font-size: 0.9rem;
+  }
+}
+
+/* For screens smaller than or equal to 320px */
+@media (max-width: 320px) {
+  .home-container {
+      padding: 5px;
+  }
+
+  .image-container {
+      width: 200px;
+      height: 200px;
+  }
+
+  .right-image {
+      height: 180px;
+      width: 180px;
+      top: 5px;
+      left: 5px;
+  }
+
+  .info-container {
+      padding: 0 10px;
+  }
+
+  .info-container h1 {
+      font-size: 1rem;
+  }
+
+  .info-container p {
+      font-size: 0.8rem;
+  }
+}

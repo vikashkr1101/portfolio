@@ -1,0 +1,187 @@
+/* Base styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.project-container.light .project-back {
+    background-color: #007bff;
+    color: rgb(0, 0, 0); /* Light theme: white text on blue background */
+}
+
+.project-container.dark .project-back {
+    background-color: #1a1a1a; /* Dark theme: dark background */
+    color: #f0f0f0; /* Dark theme: light text */
+}
+
+/* Adaptive border color based on theme */
+.project-container.light .project-tile {
+    border: 1px solid #000000; /* Light theme: light border */
+}
+
+.project-container.dark .project-tile {
+    border: 1px solid #fff; /* Dark theme: white border */
+}
+.theme-switcher {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 20px;
+}
+
+/* Project container styles */
+.title{
+    font-size: 42px;
+    text-align: center;
+    
+}
+
+.project-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows tiles to wrap */
+    gap: 20px;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+
+/* Project heading styles */
+.project-heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+    color: inherit;
+}
+
+/* Project tile styles */
+.project-tile {
+    flex: 1 1 calc(30% - 40px); /* Flexbox with initial width of 30%, accounting for margins */
+    max-width: 30%; /* Ensure max width of tiles */
+    height: 250px;
+    perspective: 1000px;
+    transition: transform 0.4s;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid; /* Border */
+    box-shadow: 0 0 7px #00c3ff;
+    margin: 10px;
+}
+
+.project-tile:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 15px 5px rgba(255, 255, 255, 0.6);
+}
+
+.project-tile .project-front,
+.project-tile .project-back {
+    width: 100%;
+    height: 100%;
+    background-color: inherit;
+    border-radius: inherit;
+    padding: 20px;
+    box-sizing: border-box;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.6s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-tile .project-back {
+    transform: rotateY(180deg);
+}
+
+.project-tile:hover .project-front {
+    transform: rotateY(180deg);
+}
+
+.project-tile:hover .project-back {
+    transform: rotateY(360deg);
+}
+
+.project-name {
+    font-size: 1.7rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.project-codes, .project-platform {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.project-back {
+    background-color: #007bff;
+ 
+    font-size: 15px;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1180px) {
+    .project-tile {
+        flex: 1 1 100%; /* Two tiles per row */
+        max-width: 45%;
+    }
+    .project-back {
+           
+        font-size: 15px;
+        text-align: justify;
+        
+    }
+}
+
+@media (max-width: 780px) {
+    .project-tile {
+        flex: 1 1 100%; 
+        max-width: 45%;
+    }
+    .project-back {
+           
+        font-size: 14px;
+        text-align: justify;
+        
+    }
+}
+
+@media (max-width: 480px) {
+    .project-tile {
+        flex: 1 1 100%;
+        max-width: 100%;
+        width:220px;
+        height: 220px;
+    }
+    .project-back {
+        font-size: 10px;
+        text-align: justify;
+        
+    }
+}
+
+@media (max-width: 320px) {
+    .project-tile {
+        flex: 1 1 100%; 
+        width: 100%;
+        height: 200px;
+    }
+
+    .project-heading {
+        font-size: 2rem;
+    }
+    .project-back {
+        font-size: 7px;
+        text-align: justify;
+        
+    }
+}
